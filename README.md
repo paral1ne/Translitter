@@ -1,1 +1,1 @@
-[Нажми для запуска](https://github.com/paral1ne/Translitter/tree/gh-pages)
+[Нажми для запуска](https://github.com/paral1ne/Translitter/tree/gh-pages/index.html)
