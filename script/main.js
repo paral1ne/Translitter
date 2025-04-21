@@ -2,7 +2,7 @@ import chars from "./collection.js";
 
 const input = document.querySelector("input");
 const output = document.querySelector(".output-text");
-const button = document.querySelector("button");
+const button = document.querySelector(".button-accept");
 
 function showText() {
   let text = input.value;
@@ -22,9 +22,7 @@ function showText() {
     .toLowerCase()}`;
 }
 
-button.addEventListener("click", showText);
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    showText();
-  }
+input.addEventListener("input", showText);
+button.addEventListener("click", () => {
+  navigator.clipboard.writeText(output.textContent);
 });

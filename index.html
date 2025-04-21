@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unicode switcher</title>
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <main>
       <div class="main__container">
-        <div class="input__container">
-          <label for="input">Enter EN letters</label>
-          <input id="input" type="text" placeholder="Enter your text..." />
+        <div class="left-side">
+          <div class="input__container">
+            <label for="input">Enter EN letters</label>
+            <input id="input" type="text" placeholder="Enter your text..." />
+          </div>
+          <div class="output__container">
+            <p>Расшифровка:</p>
+            <p class="output-text">....</p>
+            <button class="button-accept">Копировать</button>
+          </div>
         </div>
-        <div class="output__container">
-          <p>Расшифровка</p>
-          <p class="output-text">....</p>
-        </div>
-        <button>Release</button>
       </div>
     </main>
   </body>
