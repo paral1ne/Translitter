@@ -1,16 +1,30 @@
+import chars from "./collection.js";
+
 const input = document.querySelector("input");
 const output = document.querySelector(".output-text");
 const button = document.querySelector("button");
 
 function showText() {
-  console.log(output.textContent);
   let text = input.value;
 
-  let res = text.split("").reduce((acc, el) => {
-    console.log(el.charCodeAt());
-    return acc.concat(el);
-  }, []);
-  output.textContent = res.join("");
+  const res = text
+    .toUpperCase()
+    .split("")
+    .reduce((acc, el) => {
+      return acc.concat(el.charCodeAt());
+    }, []);
+
+  const unlock = res.map((el) => String.fromCharCode(chars[el]));
+
+  const answer = unlock.join("");
+  output.textContent = `${answer[0].toUpperCase()}${answer
+    .slice(1)
+    .toLowerCase()}`;
 }
 
 button.addEventListener("click", showText);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    showText();
+  }
+});
