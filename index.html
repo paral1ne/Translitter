@@ -7,18 +7,33 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
+    <header>
+      <div class="header-container">
+        <div class="radio-lang">
+          <div class="radio">
+            <label for="1">PL</label>
+            <input type="radio" name="lang" id="1" checked />
+            <label for="2">EN</label>
+            <input type="radio" name="lang" id="2" />
+          </div>
+        </div>
+        <div class="input-header">
+          <input id="input-text" type="text" placeholder="Enter your text..." />
+          <button class="button button__clear">Clear</button>
+        </div>
+      </div>
+    </header>
     <main>
       <div class="main__container">
         <div class="left-side">
-          <div class="input__container">
-            <label for="input">Enter EN letters</label>
-            <input id="input" type="text" placeholder="Enter your text..." />
-          </div>
           <div class="output__container">
-            <p>Расшифровка:</p>
+            <p>Text:</p>
             <p class="output-text">....</p>
-            <button class="button-accept">Копировать</button>
+            <button class="button button__accept">Copy</button>
           </div>
+        </div>
+        <div class="translate-box">
+          <p class="translate_text"></p>
         </div>
       </div>
     </main>
