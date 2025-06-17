@@ -8,7 +8,6 @@ const clearText = document.querySelector(".button__clear");
 
 function showText() {
   let text = input.value;
-
   if (text.length === 0) {
     return (output.textContent = "....");
   }
@@ -20,7 +19,13 @@ function showText() {
       return acc.concat(el.charCodeAt());
     }, []);
 
-  const unlock = res.map((el) => String.fromCharCode(chars[el]));
+  const unlock = res.map((el) => {
+    if (chars[el]) {
+      return String.fromCharCode(chars[el]);
+    } else {
+      return String.fromCharCode(el);
+    }
+  });
 
   const answer = unlock.join("");
   output.textContent = `${answer[0].toUpperCase()}${answer
