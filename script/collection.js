@@ -38,6 +38,8 @@ const chars = {
   62: 1070,
   46: 1102,
   32: 32,
+  47: 46,
+  63: 44,
 };
 
 export default chars;
